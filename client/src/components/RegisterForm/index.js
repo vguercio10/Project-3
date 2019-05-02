@@ -42,7 +42,7 @@ class RegisterForm extends React.Component {
 						
 						<div className="dropdown">
   						<button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    					Dropdown button
+    					Account type
   						</button>
   						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     					<a class="dropdown-item" href="#">Admin</a>
