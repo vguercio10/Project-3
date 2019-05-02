@@ -80,16 +80,6 @@ app.use(function(err, req, res, next) {
 });
 
 
-// // uses file that handles backend requests. 
-// app.use('/client/api', require("./client/routes/routes.js.js"));
-
-
-// // // this route handles login. 
-// app.post('/client/api/login', function() {
-//   console.log("testing api")
-// });
-
-
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
