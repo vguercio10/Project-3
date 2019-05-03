@@ -9,6 +9,7 @@ class RegisterForm extends React.Component {
 	passwordElem: null;
 	ageElem: null;
 	genderElem: null;
+	accountElem: null;
 
 
 	render() {
@@ -26,6 +27,7 @@ class RegisterForm extends React.Component {
 							password: this.passwordElem.value,
 							age: this.ageElem.value,
 							gender: this.genderElem.value,
+							account: this.accountElem.value
 						
 						});
 					}}
@@ -40,13 +42,13 @@ class RegisterForm extends React.Component {
 						
 						<input className="form-control"  ref={(input) => this.genderElem = input} type='text' name="gender" placeholder='Gender' /><br/>
 						
-						<div className="dropdown">
+						<div className="dropdown" ref={(input) => this.accountElem = input} type='select' name="account">
   						<button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     					Account type
   						</button>
-  						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    					<a class="dropdown-item" href="#">Admin</a>
-    					<a class="dropdown-item" href="#">User</a>
+  						<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    					<a className="dropdown-item" value = "admin" href="#">Admin</a>
+    					<a className="dropdown-item" value = "user" href="#">User</a>
  					 	</div>
 						</div>
 						<button className="btn btn btn-primary" type='submit'>Submit</button>
