@@ -26,9 +26,15 @@ class ProtectedRoute extends React.Component {
 					</Col>
 					<Col size="md-6">
 					<h3>Questions For Mama Bear</h3>
-						<Card title="Throwing Up too much" >
-							What can I do about the vomit everywhere.
-						</Card>
+                    <Card title="Enter your question for Mama Bear Here" >
+							
+                            <div className="form-group">
+                            <label for="FormControlTextarea">Enter your question here</label>
+                            <textarea className="form-control" id="FormControlTextarea" rows="3"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-outline-primary">Submit</button>
+
+                    </Card>
 					</Col>
 				</Row>
 			</Container>	
