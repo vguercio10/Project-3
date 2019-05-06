@@ -59,7 +59,10 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import {Container} from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
-import ProtectedRoute from "./pages/ProtectedRoute";
+// import ProtectedRoute from "./pages/MomDashBoard";
+import MomDashBoard from "./pages/MomDashBoard";
+import CubDashBoard from "./pages/CubDashBoard";
+
 import './App.css';
 
 //I want to add some basic inline styling here, even though we are bringing in styles
@@ -76,14 +79,19 @@ const AuthExample = () => (
 				<AuthButton/>
 				<ul style={listStyle}>
 					<li><Link to="/public">Public Page</Link></li>
-					<li><Link to="/protected">Protected Page</Link></li>
+					{/* Link to the page */}
+					<li><Link to="/momdashboard">Moms</Link></li>
+					<li><Link to="/cubdashboard">Cubs</Link></li>
 					<li><Link to="/register">Register a New User</Link></li>
 				</ul>
 				<Switch>
 					<Route path="/public" component={PublicRoute}/>
 					<Route path="/login" component={Login}/>
 					<Route path="/register" component={Register}/>
-					<PrivateRoute path="/protected" component={ProtectedRoute}/>
+					{/* <PrivateRoute path="/protected" component={ProtectedRoute}/> */}
+					<PrivateRoute path="/momdashboard" component={MomDashBoard}/>
+					<PrivateRoute path="/cubdashboard" component={CubDashBoard}/>
+
 					{/* <Route component={NoMatch} /> */}
 				</Switch>
 			</Container>
