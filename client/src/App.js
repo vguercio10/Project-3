@@ -59,7 +59,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import {Container} from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
-import ProtectedRoute from "./pages/PublicRoute";
+import ProtectedRoute from "./pages/ProtectedRoute";
 import './App.css';
 
 //I want to add some basic inline styling here, even though we are bringing in styles

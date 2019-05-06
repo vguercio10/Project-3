@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import {Container, Row, Col} from '../../components/Grid';
+import userPhoto from '../../images/user-placeholder.png';
+import Card from '../../components/Card'
 /*ToDo*/
 /**
  * Let's get some styling in here
@@ -8,7 +11,28 @@ import React from 'react'
 class ProtectedRoute extends React.Component {
 	render() {
 		return (
-			<h3>This is a Protected Route, You must log in to see this page.</h3>	
+			<Container>	
+				<Row> 
+					<Col size="md-6">
+						<h3>Welcome, Mom-username!</h3>	
+					</Col>
+				</Row>
+				<Row>
+					<Col size="md-6">
+						<img height="200px" src={userPhoto}/>
+					</Col>
+				</Row>
+				<Row>
+					<Col size="md-6">
+					<h3>Bulletin Board</h3>
+						<Card icon="bath" title="Throwing Up too much" >
+							What can I do about the vomit everywhere.
+						</Card>
+					</Col>
+					<Col size="md-6">
+					</Col>
+				</Row>
+			</Container>	
 		)
 	}
 }
