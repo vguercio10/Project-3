@@ -1,6 +1,7 @@
 const router = require("express").Router();
-const passport = require('passport');
-const usersController = require("../../controllers/usersController");
+const submissionController = require("../../controllers/submissionController");
+
+
 // Matches with "/api/users"
 router.route("/")
   .get(usersController.getUser);
@@ -15,14 +16,11 @@ router.route("/login")
 router.route("/logout")
   .get(usersController.logout);
 
-  
-
-
-// Matches with "/api/users/:id"
+  // Matches with "/api/users/:id"
 
 /* Testing Endpoint */
 router
-  .route("/ping")
-  .get(usersController.test);
+.route("/ping")
+.get(usersController.test);
 
 module.exports = router;
