@@ -30,7 +30,7 @@ class ProtectedRoute extends React.Component {
 							
                             <div className="form-group">
                             <label for="FormControlTextarea">Enter your question here</label>
-                            <textarea className="form-control" id="FormControlTextarea" rows="3"></textarea>
+                            <textarea className="form-control" id="UserQuestions" rows="3"></textarea>
                             </div>
                             <button type="button" class="btn btn-outline-primary">Submit</button>
 
