@@ -5,3 +5,7 @@ class QuestionSubmit extends React.Component {
 	state = {
 		redirectToReferrer: false
 	}
+
+	quessubmit = (data) => {
+		fetch('/api/submit/questionsave')
+	}

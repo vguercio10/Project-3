@@ -2,25 +2,20 @@ const router = require("express").Router();
 const submissionController = require("../../controllers/submissionController");
 
 
-// Matches with "/api/users"
-router.route("/")
-  .get(usersController.getUser);
+// Matches with "/api/submit/"
+router.route("/questionsave")
+  .post(submissionController.create);
 
 /* Authentication Routes */
-router.route("/register")
-  .post(usersController.register);
+router.route("/")
+  .post(submissionController.);
 
-router.route("/login")
-  .post(passport.authenticate('local', { failureRedirect: '/?error=LoginError'}), usersController.login);
-
-router.route("/logout")
-  .get(usersController.logout);
-
-  // Matches with "/api/users/:id"
+//api routes page talks to the controller. controller is the instructions sheet the database listens to.
+//get and post,& put for update methods.
 
 /* Testing Endpoint */
 router
 .route("/ping")
-.get(usersController.test);
+.get(submissionController.test);
 
 module.exports = router;
