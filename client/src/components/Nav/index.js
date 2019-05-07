@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+
 // import Login from "../LoginForm";
 
 class Nav extends Component {
@@ -48,6 +49,7 @@ class Nav extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
+      
         <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`} id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
@@ -58,6 +60,14 @@ class Nav extends Component {
               >
                 Login
               </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                onClick={this.toggleNav}
+                className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
+                to="/cubdashboard"
+              >
+cub              </Link>
             </li>
             {/* <li className="nav-item">
               <Link
