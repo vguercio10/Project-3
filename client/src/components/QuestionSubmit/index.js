@@ -2,8 +2,7 @@ import React from 'react';
 import QuestionsForm from '../QuestionsForm';
 //the component for submitting a question to the mom dashboard
 class QuestionSubmit extends React.Component {
-	//Setting components initial state
-	state = {
+
 		question: "",
 		answer: "",
 		response: "",
@@ -43,3 +42,4 @@ class QuestionSubmit extends React.Component {
 
 }
 export default QuestionSubmit
+
