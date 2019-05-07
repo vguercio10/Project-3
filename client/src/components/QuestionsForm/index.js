@@ -13,9 +13,9 @@ class QuestionsForm extends React.Component {
         console.log(`Message form props are: ${JSON.stringify(this.props)}`);
 
         return (
-            <form
+            <form>
                 ref={(elem) => this.form = elem}
-                onSubmit={(e)} => {
+                onSubmit={(e) => {
                     e.preventDefault();
                     return onSubmit({
                         question: this.questionElem.value,
@@ -24,18 +24,16 @@ class QuestionsForm extends React.Component {
                         respondantsName: this.respondantsNameElem.value
                     });
                 }}
-            >
+            
 
                 <div className="form-group">
-                    <input className="form-control" ref={(input)} => this.questionElem = input} type='text' name='question' placeholder='Enter Your Question Here.' /><br/>
+                    <input className="form-control" ref={(input) => this.questionElem = input} type='text' name='question' placeholder='Enter Your Question Here.' /><br/>
 
                     
                 </div>
                 </form>
         )
     }
-
-
 }
 
 
