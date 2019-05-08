@@ -20,7 +20,7 @@ router
 .route("/ping")
 
 .get(submissionController.findAll);
-=======
+
 
 
 
