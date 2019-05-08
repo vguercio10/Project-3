@@ -11,7 +11,6 @@ class RegisterForm extends React.Component {
 	genderElem: null;
 	accountElem: null;
 
-
 	render() {
 		const { onRegister } = this.props;
 		console.log(`Register form props are: ${JSON.stringify(this.props)}`);
