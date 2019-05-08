@@ -8,7 +8,7 @@ router.route("/questionsave")
 
 /* Authentication Routes */
 router.route("/")
-  .post(submissionController.);
+  .post(submissionController);
 
 //api routes page talks to the controller. controller is the instructions sheet the database listens to.
 //get and post,& put for update methods.
