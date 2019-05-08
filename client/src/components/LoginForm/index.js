@@ -1,4 +1,9 @@
 import React from 'react'
+import "./style.css";
+import { Media } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+
+
 
 class LoginForm extends React.Component {
 	// refs
@@ -9,8 +14,16 @@ class LoginForm extends React.Component {
 	render() {
 		const { onLogin } = this.props;
 		return (
-			
-				<form
+	<Container>
+		<Row>
+			<Col> 
+      <Media>
+        <Media object data-src="client/src/components/LoginForm/images/Amother.png/300px300" alt="Generic placeholder image" />
+      </Media>
+	  		</Col>
+			<Col>
+			<h2>Login:</h2>
+			<form
 					ref={(elem) => this.form = elem}
 					onSubmit={(e) => {
 						e.preventDefault();
@@ -28,7 +41,10 @@ class LoginForm extends React.Component {
 						</button>
 					</div>
 				</form>
-			
+			</Col>
+		</Row>
+				
+			</Container>
 		)
 	}
 }

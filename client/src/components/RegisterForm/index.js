@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Container, Row, Col } from 'reactstrap';
 
 
 class RegisterForm extends React.Component {
@@ -17,7 +17,10 @@ class RegisterForm extends React.Component {
 		console.log(`Register form props are: ${JSON.stringify(this.props)}`);
 		
 		return (
-			
+			<Container>
+		<Row>
+			<Col></Col>
+			<Col> <h4>Register a New User</h4>
 				<form
 					ref={(elem) => this.form = elem}
 					onSubmit={(e) => {
@@ -67,7 +70,7 @@ class RegisterForm extends React.Component {
 						<button className="btn btn btn-primary" type='submit'>Submit</button>
 					</div>
 				</form>
-			
+			</Col></Row></Container>
 		)
 	}
 }
