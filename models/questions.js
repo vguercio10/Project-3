@@ -10,6 +10,8 @@ const Question = new Schema({
     respondantsName: String
 });
 
+
 // Account.plugin(passportLocalMongoose);
+
 
 module.exports = mongoose.model('questions', Question);

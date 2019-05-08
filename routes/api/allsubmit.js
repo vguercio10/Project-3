@@ -7,8 +7,10 @@ router.route("/questionsave")
   .post(submissionController.create);
 
 /* Authentication Routes */
+
 router.route("/")
   .get(submissionController.findAll);
+
 
 //api routes page talks to the controller. controller is the instructions sheet the database listens to.
 //get and post,& put for update methods.
@@ -16,6 +18,10 @@ router.route("/")
 /* Testing Endpoint */
 router
 .route("/ping")
+
 .get(submissionController.findAll);
+=======
+
+
 
 module.exports = router;

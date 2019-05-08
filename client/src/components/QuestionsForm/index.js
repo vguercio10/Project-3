@@ -1,4 +1,5 @@
 import React from 'react'
+import "./style.css";
 
 class QuestionsForm extends React.Component {
     //Temporarily hold the question

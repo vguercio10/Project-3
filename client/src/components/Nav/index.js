@@ -34,9 +34,9 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+      <nav className="navbar navbar-expand-lg navbar-light mb-2">
         <Link className="navbar-brand" to="/">
-          Auth Plate
+          Home
         </Link>
         <button
           onClick={this.toggleNav}
@@ -49,6 +49,8 @@ class Nav extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
+
+        {/* links! */}
       
         <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`} id="navbarNav">
           <ul className="navbar-nav">
@@ -67,8 +69,15 @@ class Nav extends Component {
                 className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
                 to="/cubdashboard"
               >
-cub              </Link>
+                Cub              </Link>
             </li>
+            <li><Link onClick={this.toggleNav}
+                className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
+                to="/register"
+              
+              >Register a New User</Link></li>
+
+
             {/* <li className="nav-item">
               <Link
                 onClick={this.toggleNav}
