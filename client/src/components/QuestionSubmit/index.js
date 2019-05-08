@@ -40,6 +40,6 @@ class QuestionSubmit extends React.Component {
 
 
 
-}
+
 export default QuestionSubmit
 
