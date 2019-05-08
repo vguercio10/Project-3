@@ -7,6 +7,10 @@ router.route("/questionsave")
   .post(submissionController.create);
 
 /* Authentication Routes */
+
+// router.route("/")
+//   .post(submissionController.create);
+=======
 router.route("/")
   .post(submissionController);
 
@@ -16,6 +20,6 @@ router.route("/")
 /* Testing Endpoint */
 router
 .route("/ping")
-.get(submissionController.test);
+// .get(submissionController.test);
 
 module.exports = router;

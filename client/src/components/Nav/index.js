@@ -34,9 +34,9 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+      <nav className="navbar navbar-expand-lg navbar-light mb-2">
         <Link className="navbar-brand" to="/">
-          Auth Plate
+          Home
         </Link>
         <button
           onClick={this.toggleNav}
