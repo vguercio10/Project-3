@@ -81,8 +81,7 @@ const AuthExample = () => (
 					<li><Link to="/public">Public Page</Link></li>
 					{/* Link to the page */}
 					<li><Link to="/momdashboard">Moms</Link></li>
-					
-					<li><Link to="/register">Register a New User</Link></li>
+				
 				</ul>
 				<Switch>
 					<Route path="/public" component={PublicRoute}/>
