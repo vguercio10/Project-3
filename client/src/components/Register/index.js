@@ -1,11 +1,13 @@
 import React from 'react';
 import RegisterForm from "../RegisterForm";
 //The component for doing the actual signup of the User
+//This actually registers the user
 class Register extends React.Component {
+	//Keeps track of the state
 	state = {
 		redirectToReferrer: false
 	}
-
+	//This is the prop to send to the component
 	register = (data) => {
 		fetch('api/users/register', {
 			method: 'POST',
@@ -29,6 +31,7 @@ class Register extends React.Component {
 		return (
 			<div>
 				<h4>Register a New User</h4>
+				{/* This is the actual component */}
 				<RegisterForm onRegister={this.register} />
 			</div>
 		)

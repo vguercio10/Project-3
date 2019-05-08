@@ -3,43 +3,39 @@ import QuestionsForm from '../QuestionsForm';
 //the component for submitting a question to the mom dashboard
 class QuestionSubmit extends React.Component {
 
-		question: "",
-		answer: "",
-		response: "",
-		respondantsName: ""
-	}
-	handleInputChange = event => {
-		// Getting the value and name of the input which triggered the change
-		const { question, answer, response, respondantsName } = event.target;
-	
-		// Updating the input's state
-		this.setState({
-		  [question]: value,
-		  [answer]: value,
-		  [response]: value,
-		  [respondantsName]: value
-		});
-	  };
-
-	handleFormSubmit = event => {
-
-		event.preventDefault();
-
-		fetch('/api/submit/questionsave', {
+	//This is the fucntion to hit the route with the data
+	submitQuestion = (data) => {
+		fetch('/questionsave', {
 			method: 'POST',
 			body: JSON.stringify(data),
-		}).then((response) => {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then((response) => {
 			if (response.status === 200) {
-				console.log('Succesfully registered user!');
+				console.log('Succesfully asked a question!');
 			}
 		})
 		.catch((err) => {
 			console.log('Error registering user.', err);
 		});
+		
+	  };
+		
+	render() {
+		return (
+			<div>
+				{/* This is the actual component */}
+				< QuestionsForm submitQuestion={this.submitQuestion} />
+			</div>
+		)
 	}
+	
+}//end of the class
 
 
 
 
-export default QuestionSubmit
+export default QuestionSubmit;
 
