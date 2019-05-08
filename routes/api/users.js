@@ -2,7 +2,7 @@ const router = require("express").Router();
 const passport = require('passport');
 const usersController = require("../../controllers/usersController");
 // Matches with "/api/users"
-router.route("/")
+router.route("/user")
   .get(usersController.getUser);
 
 /* Authentication Routes */

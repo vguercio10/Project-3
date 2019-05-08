@@ -1,7 +1,8 @@
 import React from 'react';
 import {Container, Row, Col} from '../../components/Grid';
+import QuestionSubmit from '../../components/QuestionSubmit';
 import userPhoto from '../../images/user-placeholder.png';
-import Card from '../../components/Card'
+import Card from '../../components/Card';
 
 class ProtectedRoute extends React.Component {
 	render() {
@@ -26,14 +27,8 @@ class ProtectedRoute extends React.Component {
 					</Col>
 					<Col size="md-6">
 					<h3>Questions For Mama Bear</h3>
-                    <Card title="Enter your question for Mama Bear Here" >
-							
-                            <div className="form-group">
-                            <label for="FormControlTextarea">Enter your question here</label>
-                            <textarea className="form-control" id="UserQuestions" rows="3"></textarea>
-                            </div>
-                            <button type="button" class="btn btn-outline-primary">Submit</button>
-
+                    <Card title="Enter your question for Mama Bear Here" >	
+                        <QuestionSubmit/>
                     </Card>
 					</Col>
 				</Row>
