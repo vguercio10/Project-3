@@ -5,7 +5,8 @@ class QuestionSubmit extends React.Component {
 
 	//This is the fucntion to hit the route with the data
 	submitQuestion = (data) => {
-		fetch('/questionsave', {
+		console.log(data)
+		fetch('/api/submit/questionsave', {
 			method: 'POST',
 			body: JSON.stringify(data),
 			headers: {
@@ -28,6 +29,7 @@ class QuestionSubmit extends React.Component {
 			<div>
 				{/* This is the actual component */}
 				< QuestionsForm submitQuestion={this.submitQuestion} />
+				
 			</div>
 		)
 	}
