@@ -1,18 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const passportLocalMongoose = require('passport-local-mongoose');
 
 const Question = new Schema({
-    userEmail: String,
-    username: String,
+
+    user: { type: Schema.Types.ObjectId, ref: "Account"},
     question: String,
     answer: Boolean,
     response: String,
     respondantsName: String
+    
 });
-
-
-// Account.plugin(passportLocalMongoose);
-
 
 module.exports = mongoose.model('questions', Question);

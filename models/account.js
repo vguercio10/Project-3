@@ -7,7 +7,8 @@ const Account = new Schema({
     password: String,
     age: Number,
     gender: String,
-    account: String
+    account: String,
+    questions: [{ type: Schema.Types.ObjectId, ref: "Question"}]
 });
 
 Account.plugin(passportLocalMongoose);

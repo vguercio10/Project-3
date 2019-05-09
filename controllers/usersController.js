@@ -31,8 +31,14 @@ module.exports = {
 								if (err) {
 										return next(err);
 								}
+								
+ 
+								// if (req.body.account === "user"){}
+								//conditional for cub or mom
+								
+								//Send them to the dashboard
 
-								res.status(200).send('OK');
+								// res.redirect("/login");
 						});
 				});
 		});

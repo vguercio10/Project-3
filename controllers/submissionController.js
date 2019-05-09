@@ -20,6 +20,11 @@ module.exports = {
         console.log(req.body);
         db.Questions
         .create(req.body)
+        .then(dbModel=>{
+            console.log(dbModel._id);
+            
+            return db.Account.findOneAndUpdate({},{$push:{questions:dbModel._id}},{new:true})
+        })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
