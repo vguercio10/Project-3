@@ -20,14 +20,14 @@ class ProtectedRoute extends React.Component {
 				</Row>
 				<Row>
 					<Col size="md-6">
-					<h3>Messages with Mama Bear</h3>
-						<Card title="Throwing Up too much" >
-							What can I do about the vomit everywhere.
+					
+						<Card title="Messages With Mom" >
+							*Display history of Messages as a list in order from most recent.
 						</Card>
 					</Col>
 					<Col size="md-6">
-					<h3>Questions For Mama Bear</h3>
-                    <Card title="Enter your question for Mama Bear Here" >	
+					
+                    <Card title="Advice Requests" >	
                         <QuestionSubmit/>
                     </Card>
 					</Col>

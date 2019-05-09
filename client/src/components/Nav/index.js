@@ -88,7 +88,7 @@ class Nav extends Component {
               >
                 Cub              </Link>
             </li>
-            <li><Link onClick={this.toggleNav} className={window.location.pathname ==="/" ? "nav-link active" : "nav-link"} to="/momdashboard">Moms</Link></li>
+            <li><Link onClick={this.toggleNav} className={window.location.pathname ==="/" ? "nav-link active" : "nav-link"} to="/momdashboard">Mom</Link></li>
             <li>
               <Link onClick={this.toggleNav}
                 className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
