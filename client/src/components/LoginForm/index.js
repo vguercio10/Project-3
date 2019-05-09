@@ -1,6 +1,5 @@
 import React from 'react'
 import "./style.css";
-import { Media } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
 
 
@@ -17,9 +16,7 @@ class LoginForm extends React.Component {
 	<Container>
 		<Row>
 			<Col> 
-      <Media>
-        <Media object data-src="client/src/components/LoginForm/images/Amother.png/300px300" alt="Generic placeholder image" />
-      </Media>
+      
 	  		</Col>
 			<Col>
 			<h2>Login:</h2>
@@ -34,7 +31,7 @@ class LoginForm extends React.Component {
 					}}
 				>
 					<div className="form-group">
-						<input className="form-control" ref={(input) => this.usernameElem = input} type='text' name="username" placeholder='Enter Username' /><br/>
+						<input className="form-control" ref={(input) => this.usernameElem = input} type='text' name="username" placeholder='Enter Email' /><br/>
 						<input className="form-control" ref={(input) => this.passwordElem = input} type='password' name="password" placeholder='Password' /><br/>
 						<button className="btn btn-success" type='submit'>
 							Submit
@@ -42,6 +39,7 @@ class LoginForm extends React.Component {
 					</div>
 				</form>
 			</Col>
+			<Col></Col>
 		</Row>
 				
 			</Container>
