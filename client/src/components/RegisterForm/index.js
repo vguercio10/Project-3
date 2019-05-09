@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, FormGroup, Label, Input } from 'reactstrap';
 
 
 class RegisterForm extends React.Component {
@@ -34,6 +34,7 @@ class RegisterForm extends React.Component {
 						});
 					}}
 				>
+				{/* Inputs for registering new user */}
 					<div className="form-group">
 						<input className="form-control" ref={(input) => this.usernameElem = input} type='text' name="username" placeholder='Enter Username' /><br/>
 						
@@ -43,21 +44,14 @@ class RegisterForm extends React.Component {
 						placeholder='Age' /><br/>
 						
 						<input className="form-control"  ref={(input) => this.genderElem = input} type='text' name="gender" placeholder='Gender' /><br/>
-						
-						{/* <div className="dropdown">
-  						<button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    					Account type
-  						</button>
-  						<div className="dropdown-menu" ref={(value) => this.accountElem = value} type="select" name="account" aria-labelledby="dropdownMenuButton">
-						
-    					<a className="dropdown-item" value = "admin" href="#">Admin</a>
-    					<a className="dropdown-item" value = "user" href="#">User</a>
-						
- 					 	</div>
-						</div> */}
-						
-    				
-  						
+						{/* <FormGroup>
+          					<Label for="exampleSelect">Select</Label>
+          						<Input type="select" ref={(value) => this.accountElem = value} name="select">
+            						<option value= "admin">Mother</option>
+            						<option value="user">User</option>
+          						</Input>
+        					</FormGroup> */}
+
 						<select ref={(value) => this.accountElem = value}>
   							<option value="admin">Admin</option>
   							<option value="user">User</option>
