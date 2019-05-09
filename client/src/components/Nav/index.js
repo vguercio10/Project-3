@@ -9,7 +9,7 @@ import "./style.css";
 const AuthButton = withRouter(({ history }) => (
 	Auth.isAuthenticated ? (
     <ul class="nav navbar-nav navbar-right">
-			<button className="btn btn-danger" 
+			<button className="btn btn-safe" 
 				onClick={() => {
 					Auth.signout(() => history.push('/'))
 				}}>
@@ -17,7 +17,7 @@ const AuthButton = withRouter(({ history }) => (
 			</button>
     </ul>
 	) : (
-		<p>You are not logged in.</p>
+		<p></p>
 	)
 ))
 
@@ -88,6 +88,7 @@ class Nav extends Component {
               >
                 Cub              </Link>
             </li>
+            <li><Link onClick={this.toggleNav} className={window.location.pathname ==="/" ? "nav-link active" : "nav-link"} to="/momdashboard">Moms</Link></li>
             <li>
               <Link onClick={this.toggleNav}
                 className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
@@ -96,9 +97,9 @@ class Nav extends Component {
               >Register a New User</Link>
             </li>
             
-					  <li><Link onClick={this.toggleNav} className={window.location.pathname ==="/" ? "nav-link active" : "nav-link"} to="/public">Public Page</Link></li>
+					  {/* <li><Link onClick={this.toggleNav} className={window.location.pathname ==="/" ? "nav-link active" : "nav-link"} to="/public">Public Page</Link></li> */}
 					  {/* Link to the page */}
-					  <li><Link onClick={this.toggleNav} className={window.location.pathname ==="/" ? "nav-link active" : "nav-link"} to="/momdashboard">Moms</Link></li>
+					  
             
 
             {/* <li className="nav-item">
