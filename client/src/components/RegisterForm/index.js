@@ -63,7 +63,9 @@ class RegisterForm extends React.Component {
 						<button className="btn btn btn-primary" type='submit'>Submit</button>
 					</div>
 				</form>
-			</Col></Row></Container>
+			</Col>
+			<Col></Col>
+			</Row></Container>
 		)
 	}
 }
