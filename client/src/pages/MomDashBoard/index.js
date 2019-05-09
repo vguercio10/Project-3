@@ -24,15 +24,13 @@ class ProtectedRoute extends React.Component {
 				</Row>
 				<Row>
 					<Col size="md-6">
-					<h3>Bulletin Board</h3>
-						<Card title="Throwing Up too much" >
-							What can I do about the vomit everywhere.
+						<Card title="Bulletin Board" >
+							*Advice Requests displayed here.
 						</Card>
 					</Col>
 					<Col size="md-6">
-					<h3>Answered Questions</h3>
-						<Card title="Throwing Up too much" >
-							What can I do about the vomit everywhere.
+						<Card title="Answered Questions" >
+							*History of answered advice requests displayed here in order most recent.
 						</Card>
 					</Col>
 				</Row>

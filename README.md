@@ -2,9 +2,11 @@
 
 ## About This Application
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+This app was developed to help bridge the gap between maternal advice and anyone who is seeking it. There are many cases where people of all walks, age, gender or situations could use a mom to reach out to in search of that motherly wisdom. 
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+The application allows you to register as either a "Mom" or a basic user. Under the "Mom" Administrative page, you will see a welcome message at the top of your dashboard.  Underneath the welcome screen, you can see to your left is your buletin board where all requests for advice from the "Cub" useres will be displayed. And to your right is the history of your answered questions you've chose to respond to from the bulletin board.
+
+As a user, once you login, your dashboard will be displayed as a welcome message at the top with a "messages" section to the left and "question submit" box to the right directly underneath the welcome message. 
 
 ## Starting the app locally
 
@@ -27,3 +29,8 @@ Your app should now be running on <http://localhost:3000>. The Express server sh
 ## Deployment (Heroku)
 
 To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+
+
+to do list: 
+finish read me, 
+photo on there somewhere!
