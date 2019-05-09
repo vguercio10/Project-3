@@ -25,6 +25,7 @@ class Login extends React.Component {
 				Auth.authenticate(() => { //Update the boolean and take off the cuffs
 					this.setState({ redirectToReferrer: true })
 				});
+				localStorage.setItem("userEmail", data.username);
 			}
 		})
 		.catch((err) => {// No beuno, kick them
