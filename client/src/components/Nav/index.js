@@ -1,9 +1,25 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link,withRouter } from "react-router-dom";
+import Auth from "../../utils/Auth";
 import "./style.css";
 
 
 // import Login from "../LoginForm";
+//Authbutton component / withRouter is imported from react-router
+const AuthButton = withRouter(({ history }) => (
+	Auth.isAuthenticated ? (
+    <ul class="nav navbar-nav navbar-right">
+			<button className="btn btn-danger" 
+				onClick={() => {
+					Auth.signout(() => history.push('/'))
+				}}>
+				Sign out
+			</button>
+    </ul>
+	) : (
+		<p>You are not logged in.</p>
+	)
+))
 
 class Nav extends Component {
   state = {
@@ -72,12 +88,18 @@ class Nav extends Component {
               >
                 Cub              </Link>
             </li>
-            <li><Link onClick={this.toggleNav}
+            <li>
+              <Link onClick={this.toggleNav}
                 className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
                 to="/register"
               
-              >Register a New User</Link></li>
-
+              >Register a New User</Link>
+            </li>
+            
+					  <li><Link onClick={this.toggleNav} className={window.location.pathname ==="/" ? "nav-link active" : "nav-link"} to="/public">Public Page</Link></li>
+					  {/* Link to the page */}
+					  <li><Link onClick={this.toggleNav} className={window.location.pathname ==="/" ? "nav-link active" : "nav-link"} to="/momdashboard">Moms</Link></li>
+            
 
             {/* <li className="nav-item">
               <Link
@@ -98,6 +120,7 @@ class Nav extends Component {
               </Link>
             </li> */}
           </ul>
+          <AuthButton/>
         </div>
       </nav>
     );

@@ -9,8 +9,8 @@ class PublicRoute extends React.Component {
 	render() {
 		return (
             <div>
-                <h3>This is a Public Page Here</h3>
-                <p>New content here..</p>
+                {/* <h3>This is a Public Page Here</h3> */}
+                {/* <p>New content here..</p> */}
             </div>	
 		)
 	}
