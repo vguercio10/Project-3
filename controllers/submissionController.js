@@ -19,12 +19,9 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
-        console.log(req.body);
         db.Questions
             .create(req.body)
             .then(dbModel => {
-                console.log(dbModel._id);
-
                 return db.Account.findOneAndUpdate({}, {
                     $push: {
                         questions: dbModel._id
@@ -36,6 +33,7 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+    //This will update the question
     update: function (req, res) {
         console.log(req.body)
         db.Questions
