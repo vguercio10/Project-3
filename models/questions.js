@@ -7,7 +7,11 @@ const Question = new Schema({
     question: String,
     answer: Boolean,
     response: String,
-    respondantsName: String
+    respondantsName: String,
+    date: {
+        type: Date, 
+        default: Date.now
+    }
     
 });
 

@@ -8,7 +8,7 @@ import "./style.css";
 //Authbutton component / withRouter is imported from react-router
 const AuthButton = withRouter(({ history }) => (
 	Auth.isAuthenticated ? (
-    <ul class="nav navbar-nav navbar-right">
+    <ul className="nav navbar-nav navbar-right">
 			<button className="btn btn-safe" 
 				onClick={() => {
 					Auth.signout(() => history.push('/'))
