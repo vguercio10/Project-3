@@ -29,13 +29,3 @@ Your app should now be running on <http://localhost:3000>. The Express server sh
 ## Deployment (Heroku)
 
 To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
-
-
-to do list: 
--finish read me, 
--photo on there somewhere!
--make daashoard cards longer
--change text to white
--change card titel to a darker grey w/ white text.
-
-react strap with boostrap. what is that...explain!

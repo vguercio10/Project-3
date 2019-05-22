@@ -52,7 +52,7 @@ class Nav extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light mb-2">
-        <Link className="navbar-brand" to="/">
+        {/* <Link className="navbar-brand" to="/">
           Home
         </Link>
         <button
@@ -65,12 +65,19 @@ class Nav extends Component {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon" />
-        </button>
+        </button> */}
 
         {/* links! */}
       
         <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`} id="navbarNav">
           <ul className="navbar-nav">
+          <li>
+              <Link onClick={this.toggleNav}
+                className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
+                to="/register"
+              
+              >Register a New User</Link>
+            </li>
             <li className="nav-item">
               <Link
                 onClick={this.toggleNav}
@@ -85,41 +92,12 @@ class Nav extends Component {
                 onClick={this.toggleNav}
                 className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
                 to="/cubdashboard"
-              >
-                Cub              </Link>
+              >User</Link>
             </li>
             <li><Link onClick={this.toggleNav} className={window.location.pathname ==="/" ? "nav-link active" : "nav-link"} to="/momdashboard">Mom</Link></li>
-            <li>
-              <Link onClick={this.toggleNav}
-                className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
-                to="/register"
-              
-              >Register a New User</Link>
-            </li>
             
-					  {/* <li><Link onClick={this.toggleNav} className={window.location.pathname ==="/" ? "nav-link active" : "nav-link"} to="/public">Public Page</Link></li> */}
-					  {/* Link to the page */}
+            
 					  
-            
-
-            {/* <li className="nav-item">
-              <Link
-                onClick={this.toggleNav}
-                className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
-                to="/"
-              >
-                Search
-              </Link>
-            </li> */}
-            {/* <li className="nav-item">
-              <Link
-                onClick={this.toggleNav}
-                className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                to="/saved"
-              >
-                Saved
-              </Link>
-            </li> */}
           </ul>
           <AuthButton/>
         </div>
