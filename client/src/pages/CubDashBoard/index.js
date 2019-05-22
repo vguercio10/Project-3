@@ -54,7 +54,7 @@ class ProtectedRoute extends React.Component {
       <Container>
         <Row>
           <Col size="md-6">
-            <h3>Welcome, Cub-username!</h3>
+            <h3>Welcome!</h3>
           </Col>
         </Row>
         <Row>
